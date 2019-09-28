@@ -1,8 +1,16 @@
-server:
-  port: 8080
 spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/1027470853/wfuConfig.git
+  profiles:
+    active:
+      - dev
+
+---
+spring:
+  profiles: dev
+  application:
+    name: dev
+    
+---
+spring:
+  profiles: test
+  application:
+    name: test
